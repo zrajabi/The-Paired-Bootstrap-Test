@@ -8,5 +8,5 @@ We first compute delta(D), which is the performance difference between model A a
 The bootstrap test creates b samples of the reference dataset D. Each sample contains n instances, which are sampled uniformly at random and with replacement from the reference dataset D. That is, each of the b samples contain n instances drawn at random and with replacement from the test dataset D in our case. The macro-F1 score of model A and model B is computed on each of the samples xi, where 1 <= i <= b, and the difference delta(xi) = macro-F1(A, xi) - macro-F1(A, xi) is computed. Every time delta(xi) > 2 delta(D), an integer s is incremented. The value s=b counts in what percentage of the b samples, the difference in performance between models A and B exceeds (by a factor of two) that on the full test dataset. The value s=b reports on what %of the b samples model A beat expectations and acts as a one-sided empirical p-value. The intuition is that if very few of the samples beat expectations (that is, the p-value is small), then the observed delta(D) is probably not accidental; hence, p-value is small.
 
 Reference:
-
+J. M. D Jurafsky, Speech and language processing (3rd edition). Prentice Hall, 2019.
 https://web.stanford.edu/~jurafsky/slp3/4.pdf
